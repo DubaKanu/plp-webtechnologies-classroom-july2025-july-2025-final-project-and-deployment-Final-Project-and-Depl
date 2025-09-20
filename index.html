@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering Futures - Re-enrollment Initiative for Teenage Mothers</title>
+    <meta name="description" content="Breaking the cycle of early marriage through education. Supporting teenage mothers in Sierra Leone to return to school and build brighter futures.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4a3cff;
+            --primary-dark: #3a2ce0;
+            --secondary: #ff6b6b;
+            --accent: #4ecdc4;
+            --light: #f8f9fa;
+            --dark: #1a1a2e;
+            --text: #333333;
+            --text-light: #6c757d;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Navigation Styles */
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(74, 60, 255, 0.05) 0%, rgba(120, 99, 255, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .hero-highlight {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: rgba(74, 60, 255, 0.2);
+            z-index: -1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Story Section */
+        .story-section {
+            background: var(--light);
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .quote-container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .quote-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .story-paragraphs p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .story-cards {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .story-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .card-header h3 {
+            font-size: 1.3rem;
+            color: var(--dark);
+        }
+
+        .story-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .about-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-top: 3rem;
+        }
+
+        .about-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .about-column h4 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .about-column ul {
+            list-style: none;
+        }
+
+        .about-column li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            color: var(--text);
+        }
+
+        .about-column li:last-child {
+            border-bottom: none;
+        }
+
+        /* Impact Section */
+        .impact-section {
+            background: white;
+        }
+
+        .crisis-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .crisis-stat {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light);
+            border-radius: 15px;
+            transition: var(--transition);
+        }
+
+        .crisis-stat:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .crisis-stat:hover .crisis-number,
+        .crisis-stat:hover .crisis-label,
+        .crisis-stat:hover .crisis-description {
+            color: white;
+        }
+
+        .crisis-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .crisis-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .crisis-description {
+            color: var(--text-light);
+        }
+
+        .impact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .impact-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .impact-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .cycle-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .cycle-step {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        /* Solution Section */
+        .solution-section {
+            background: var(--light);
+        }
+
+        .solution-pillars {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .pillar {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .pillar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .pillar-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .pillar h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .pillar ul {
+            list-style: none;
+        }
+
+        .pillar li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            color: var(--text);
+        }
+
+        .pillar li:last-child {
+            border-bottom: none;
+        }
+
+        .implementation-timeline {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .timeline-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: 10px;
+        }
+
+        .timeline-marker {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .timeline-content h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+        }
+
+        /* Support Section */
+        .support-section {
+            background: white;
+        }
+
+        .funding-needs {
+            background: var(--light);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+        }
+
+        .funding-overview {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .total-funding {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .funding-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .funding-period {
+            color: var(--text-light);
+        }
+
+        .funding-breakdown {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .funding-item {
+            display: grid;
+            grid-template-columns: 1fr 2fr auto;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .funding-category {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .funding-bar {
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .funding-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
+        }
+
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .support-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .support-card:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .support-card:hover h4,
+        .support-card:hover p,
+        .support-card:hover li {
+            color: white;
+        }
+
+        .support-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .support-card p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .donation-amounts {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .amount {
+            padding: 0.5rem 1rem;
+            background: white;
+            color: var(--primary);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 2px solid var(--primary);
+        }
+
+        .support-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .support-card li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .support-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(74, 60, 255, 0.05) 0%, rgba(120, 99, 255, 0.1) 100%);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .story-content,
+            .impact-content,
+            .contact-content,
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .solution-pillars,
+            .support-options,
+            .crisis-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .impact-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .funding-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="container nav-content">
+            <a href="#home" class="nav-logo">Empowering Futures</a>
+            
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#story" class="nav-link">Our Story</a>
+                <a href="#impact" class="nav-link">Impact</a>
+                <a href="#solution" class="nav-link">Solution</a>
+                <a href="#support" class="nav-link">Support Us</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Breaking the Cycle of
+                    <span class="hero-highlight">Early Marriage</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Empowering teenage mothers in Sierra Leone to return to education and build brighter futures
+                </p>
+                <p class="hero-description">
+                    Every young girl deserves the chance to complete her education, regardless of the challenges she faces.
+                    Our re-enrollment initiative supports teenage mothers in breaking free from the cycle of early marriage
+                    and poverty through education and empowerment.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#support" class="btn btn-primary">
+                        Support Our Mission
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="#story" class="btn btn-outline">Learn Our Story</a>
+                </div>
+            </div>
+            
+            <!-- Impact Stats -->
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Girls Affected Annually</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Drop Out Due to Pregnancy</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-hands-helping"></i></div>
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Current Support Programs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Story, Their Future</h2>
+                <p class="section-subtitle">
+                    From personal struggle to advocacy - how one woman's journey sparked a movement for change
+                </p>
+            </div>
+
+            <div class="story-content">
+                <div class="story-text">
+                    <div class="quote-container">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <blockquote class="quote-text">
+                            "In Sierra Leone, when a young girl becomes pregnant, parents often give her away for early marriage.
+                            This is wrong. Pregnancy should not be the end of education."
+                        </blockquote>
+                    </div>
+
+                    <div class="story-paragraphs">
+                        <p>
+                            I was fortunate. When I became pregnant after my first year of high school, my uncle refused to give me
+                            away for early marriage. Instead, he supported my dream to continue my education, even when it meant
+                            incredible hardship.
+                        </p>
+                        <p>
+                            I sold charcoal to pay for nursing school. When that became impossible, I applied for the Mastercard
+                            Foundation scholarship that brought me to Rwanda. Here, I see young mothers continuing their education -
+                            something that seems impossible back home.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="story-cards">
+                    <div class="story-card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <h3>Sierra Leone Reality</h3>
+                        </div>
+                        <p>
+                            Young girls who become pregnant are forced into early marriage, ending their education and trapping
+                            them in cycles of poverty and dependency.
+                        </p>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                            <h3>Rwanda Inspiration</h3>
+                        </div>
+                        <p>
+                            Here in Kigali, I see teenage mothers with two children still pursuing their education, supported by
+                            their families and communities.
+                        </p>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                            <h3>Our Mission</h3>
+                        </div>
+                        <p>
+                            Create advocacy programs that support teenage mothers in returning to school, preventing them from
+                            becoming liabilities and stopping men from taking advantage.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h3 class="about-title">About Josephine Duba Kanu</h3>
+                <div class="about-content">
+                    <div class="about-column">
+                        <h4>Education</h4>
+                        <ul>
+                            <li>B.Sc. Software Engineering - African Leadership University</li>
+                            <li>B.A. Nursing - University of Makeni (UNIMAK)</li>
+                            <li>Full Stack Development - ALX Program</li>
+                        </ul>
+                    </div>
+                    <div class="about-column">
+                        <h4>Advocacy Experience</h4>
+                        <ul>
+                            <li>Women Empowerment Initiatives</li>
+                            <li>Maternal Health Workshop Programs</li>
+                            <li>Youth Mentorship Programs</li>
+                            <li>Community Health Education</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Crisis We Face</h2>
+                <p class="section-subtitle">
+                    Understanding the scope and urgency of the teenage pregnancy crisis in Sierra Leone
+                </p>
+            </div>
+
+            <div class="crisis-stats">
+                <div class="crisis-stat">
+                    <div class="crisis-number">39%</div>
+                    <div class="crisis-label">Teenage Pregnancy Rate</div>
+                    <div class="crisis-description">One of the highest rates globally</div>
+                </div>
+                <div class="crisis-stat">
+                    <div class="crisis-number">1,000+</div>
+                    <div class="crisis-label">Girls Affected Annually</div>
+                    <div class="crisis-description">In our target communities alone</div>
+                </div>
+                <div class="crisis-stat">
+                    <div class="crisis-number">85%</div>
+                    <div class="crisis-label">Never Return to School</div>
+                    <div class="crisis-description">Without intervention programs</div>
+                </div>
+            </div>
+
+            <div class="impact-content">
+                <div class="impact-text">
+                    <h3>Breaking the Cycle</h3>
+                    <p>
+                        When teenage girls become pregnant in Sierra Leone, they face a devastating reality: forced marriage,
+                        educational abandonment, and a lifetime of economic dependency. This cycle perpetuates poverty and
+                        limits opportunities for entire families and communities.
+                    </p>
+                    <p>
+                        Our initiative aims to break this cycle by providing comprehensive support that enables young mothers
+                        to continue their education while caring for their children.
+                    </p>
+                </div>
+                
+                <div class="impact-visual">
+                    <div class="cycle-diagram">
+                        <div class="cycle-step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Teenage Pregnancy</div>
+                        </div>
+                        <div class="cycle-step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Forced Marriage</div>
+                        </div>
+                        <div class="cycle-step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Educational Abandonment</div>
+                        </div>
+                        <div class="cycle-step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Economic Dependency</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Comprehensive Solution</h2>
+                <p class="section-subtitle">
+                    A multi-faceted approach to supporting teenage mothers in continuing their education
+                </p>
+            </div>
+
+            <div class="solution-pillars">
+                <div class="pillar">
+                    <div class="pillar-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Educational Support</h3>
+                    <ul>
+                        <li>Flexible school schedules</li>
+                        <li>Childcare during classes</li>
+                        <li>Academic tutoring</li>
+                        <li>Scholarship programs</li>
+                    </ul>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-icon"><i class="fas fa-baby"></i></div>
+                    <h3>Childcare Services</h3>
+                    <ul>
+                        <li>On-site nursery facilities</li>
+                        <li>Trained childcare providers</li>
+                        <li>Health monitoring</li>
+                        <li>Early childhood development</li>
+                    </ul>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Life Skills Training</h3>
+                    <ul>
+                        <li>Financial literacy</li>
+                        <li>Parenting skills</li>
+                        <li>Leadership development</li>
+                        <li>Career guidance</li>
+                    </ul>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Health & Wellness</h3>
+                    <ul>
+                        <li>Maternal health support</li>
+                        <li>Mental health counseling</li>
+                        <li>Nutrition programs</li>
+                        <li>Family planning education</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="implementation-timeline">
+                <h3>Implementation Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h4>Phase 1: Foundation (Months 1-6)</h4>
+                            <p>Establish partnerships, secure facilities, recruit staff</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h4>Phase 2: Pilot Program (Months 7-18)</h4>
+                            <p>Launch with 50 participants, refine processes</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h4>Phase 3: Scale Up (Months 19-36)</h4>
+                            <p>Expand to serve 200+ young mothers annually</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Support Our Mission</h2>
+                <p class="section-subtitle">
+                    Help us break the cycle of early marriage and empower young mothers through education
+                </p>
+            </div>
+
+            <div class="funding-needs">
+                <div class="funding-overview">
+                    <h3>Funding Requirements</h3>
+                    <div class="total-funding">
+                        <span class="funding-amount">$150,000</span>
+                        <span class="funding-period">3-Year Program</span>
+                    </div>
+                </div>
+
+                <div class="funding-breakdown">
+                    <div class="funding-item">
+                        <div class="funding-category">Educational Support</div>
+                        <div class="funding-bar">
+                            <div class="funding-fill" style="width: 40%"></div>
+                        </div>
+                        <div class="funding-amount">$60,000</div>
+                    </div>
+                    <div class="funding-item">
+                        <div class="funding-category">Childcare Services</div>
+                        <div class="funding-bar">
+                            <div class="funding-fill" style="width: 30%"></div>
+                        </div>
+                        <div class="funding-amount">$45,000</div>
+                    </div>
+                    <div class="funding-item">
+                        <div class="funding-category">Life Skills Training</div>
+                        <div class="funding-bar">
+                            <div class="funding-fill" style="width: 20%"></div>
+                        </div>
+                        <div class="funding-amount">$30,000</div>
+                    </div>
+                    <div class="funding-item">
+                        <div class="funding-category">Operations</div>
+                        <div class="funding-bar">
+                            <div class="funding-fill" style="width: 10%"></div>
+                        </div>
+                        <div class="funding-amount">$15,000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-options">
+                <div class="support-card">
+                    <h4>Individual Donors</h4>
+                    <p>Every contribution makes a difference in a young mother's life</p>
+                    <div class="donation-amounts">
+                        <span class="amount">$25</span>
+                        <span class="amount">$50</span>
+                        <span class="amount">$100</span>
+                        <span class="amount">$500</span>
+                    </div>
+                </div>
+
+                <div class="support-card">
+                    <h4>Corporate Partnerships</h4>
+                    <p>Partner with us to create lasting change in communities</p>
+                    <ul>
+                        <li>Brand visibility opportunities</li>
+                        <li>Employee engagement programs</li>
+                        <li>Impact reporting</li>
+                    </ul>
+                </div>
+
+                <div class="support-card">
+                    <h4>Grant Opportunities</h4>
+                    <p>We're actively seeking foundation and government grants</p>
+                    <ul>
+                        <li>Education-focused foundations</li>
+                        <li>Women's empowerment grants</li>
+                        <li>International development funds</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">
+                    Ready to support our mission or learn more about our initiative?
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>josephine.kanu@example.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+250 XXX XXX XXX</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Kigali, Rwanda</p>
+                            <p>Freetown, Sierra Leone</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization">Organization (Optional)</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">I'm interested in:</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Select an option</option>
+                                <option value="donation">Making a donation</option>
+                                <option value="partnership">Corporate partnership</option>
+                                <option value="volunteer">Volunteering</option>
+                                <option value="grant">Grant opportunities</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Empowering Futures</h4>
+                    <p>Breaking the cycle of early marriage through education and empowerment for teenage mothers in Sierra Leone.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link">Home</a>
+                        <a href="#story" class="footer-link">Our Story</a>
+                        <a href="#impact" class="footer-link">Impact</a>
+                        <a href="#solution" class="footer-link">Solution</a>
+                        <a href="#support" class="footer-link">Support Us</a>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact Information</h4>
+                    <p><i class="fas fa-envelope"></i> josephine.kanu@example.com</p>
+                    <p><i class="fas fa-phone"></i> +250 793224196 </p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda & Freetown, Sierra Leone</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Empowering Futures. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // Navigation functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const nav = document.querySelector(".nav-container")
+            const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
+            const navLinks = document.querySelectorAll(".nav-link")
+            const scrollToTopBtn = document.getElementById("scrollToTop")
+            const contactForm = document.getElementById("contactForm")
+
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener("click", () => {
+                mobileMenuBtn.classList.toggle("active")
+                document.querySelector(".nav-links").classList.toggle("active")
+            })
+
+            // Smooth scrolling for navigation links
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault()
+                    const target = this.getAttribute("href")
+                    const element = document.querySelector(target)
+                    
+                    if (element) {
+                        const offsetTop = element.offsetTop - 80
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: "smooth"
+                        })
+                    }
+                })
+            })
+
+            // Scroll effects
+            window.addEventListener("scroll", () => {
+                const scrolled = window.scrollY > 50
+
+                // Navigation background
+                if (scrolled) {
+                    nav.classList.add("scrolled")
+                } else {
+                    nav.classList.remove("scrolled")
+                }
+
+                // Scroll to top button
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.add("visible")
+                } else {
+                    scrollToTopBtn.classList.remove("visible")
+                }
+
+                // Active navigation link
+                const sections = document.querySelectorAll("section[id]")
+                let current = ""
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100
+                    const sectionHeight = section.offsetHeight
+                    
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute("id")
+                    }
+                })
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active")
+                    if (link.getAttribute("href") === `#${current}`) {
+                        link.classList.add("active")
+                    }
+                })
+            })
+
+            // Scroll to top functionality
+            scrollToTopBtn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                })
+            })
+
+            // Contact form handling
+            contactForm.addEventListener("submit", (e) => {
+                e.preventDefault()
+
+                // Get form data
+                const formData = new FormData(contactForm)
+                const data = Object.fromEntries(formData)
+
+                // Simple validation
+                if (!data.name || !data.email || !data.interest || !data.message) {
+                    alert("Please fill in all required fields.")
+                    return
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+                if (!emailRegex.test(data.email)) {
+                    alert("Please enter a valid email address.")
+                    return
+                }
+
+                // Simulate form submission
+                alert("Thank you for your message! We will get back to you soon.")
+                contactForm.reset()
+            })
+
+            // Animation on scroll
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll(".fade-in")
+                
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top
+                    const elementVisible = 150
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add("visible")
+                    }
+                })
+            }
+
+            window.addEventListener("scroll", animateOnScroll)
+            animateOnScroll() // Initial check
+        })
+    </script>
+</body>
+</html>
